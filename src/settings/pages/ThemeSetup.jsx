@@ -54,13 +54,13 @@ function ThemeSetup() {
     function StepText({text}) {
         switch (text) {
             case 0:
-                return __('Start Setup', 'ollie');
+                return __('Start Setup', 'ollie-companion');
             case 2:
-                return __('Create Pages and Continue', 'ollie');
+                return __('Create Pages and Continue', 'ollie-companion');
             case 4:
-                return __('Save and Finish', 'ollie');
+                return __('Save and Finish', 'ollie-companion');
             default:
-                return __('Save and Continue', 'ollie');
+                return __('Save and Continue', 'ollie-companion');
         }
     }
 
@@ -75,29 +75,29 @@ function ThemeSetup() {
         <Flex ref={startRef} align="stretch" gap="0" className="ollie-settings-inner">
             <FlexItem className={"ollie-setup-sidebar"}>
                 <div>
-                    <h2>{__('Theme Setup', 'ollie')}</h2>
-                    <p>{__('Let\'s get you up and running quicker with the setup wizard.', 'ollie')}</p>
+                    <h2>{__('Theme Setup', 'ollie-companion')}</h2>
+                    <p>{__('Let\'s get you up and running quicker with the setup wizard.', 'ollie-companion')}</p>
                     <Spacer margin={10}/>
                     <ul className={"ollie-setup-steps"}>
                         <li className={`${currentStep === 0 ? "is-active-step" : ""}`}
                             onClick={() => setCurrentStep(0)}>
-                            {__('Get Started', 'ollie')}
+                            {__('Get Started', 'ollie-companion')}
                         </li>
                         <li className={`${currentStep === 1 ? "is-active-step" : ""}`}
                             onClick={() => setCurrentStep(1)}>
-                            {__('Your Brand', 'ollie')}
+                            {__('Your Brand', 'ollie-companion')}
                         </li>
                         <li className={`${currentStep === 2 ? "is-active-step" : ""}`}
                             onClick={() => setCurrentStep(2)}>
-                            {__('Create Pages', 'ollie')}
+                            {__('Create Pages', 'ollie-companion')}
                         </li>
                         <li className={`${currentStep === 3 ? "is-active-step" : ""}`}
                             onClick={() => setCurrentStep(3)}>
-                            {__('Homepage', 'ollie')}
+                            {__('Homepage', 'ollie-companion')}
                         </li>
                         <li className={`${currentStep === 4 ? "is-active-step" : ""}`}
                             onClick={() => setCurrentStep(4)}>
-                            {__('Finish', 'ollie')}
+                            {__('Finish', 'ollie-companion')}
                         </li>
                     </ul>
                 </div>
@@ -141,7 +141,7 @@ function ThemeSetup() {
                                     {themeSettingsSaved &&
                                         <Button className="ollie-setup-saved" variant="primary"
                                                 onClick={goToPrevStep}><img
-                                            src={iconCheckSaved}/> {__('Saved!', 'ollie')}</Button>
+                                            src={iconCheckSaved}/> {__('Saved!', 'ollie-companion')}</Button>
                                     }
                                     <Flex className={`ollie-wizard-progress ollie-wizard-progress-${activeStepIndex}`}
                                           justify="center">
@@ -154,7 +154,7 @@ function ThemeSetup() {
                                 <FlexItem
                                     className={activeStepIndex < totalSteps - 1 ? "ollie-setup-step" : "ollie-hide-step"}>
                                     <Button className="ollie-wizard-back-button" variant="link"
-                                            onClick={goToPrevStep}>{__('Go Back', 'ollie')}</Button>
+                                            onClick={goToPrevStep}>{__('Go Back', 'ollie-companion')}</Button>
                                     {activeStepIndex === 2 ?
                                         <Button onClick={() => createPages(goToNextStep)}
                                                 className="ollie-wizard-button"

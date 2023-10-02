@@ -62,14 +62,14 @@ function Homepage() {
             <div className="ollie-setting-fields">
                 <Flex className="ollie-setting-intro">
                     <FlexItem>
-                        <h2 ref={pageStart}>{__('Homepage', 'ollie')}</h2>
-                        <p>{__('Select which page you\'d like to use as your homepage. You can use the pages we just created in the last step.', 'ollie')}</p>
+                        <h2 ref={pageStart}>{__('Homepage', 'ollie-companion')}</h2>
+                        <p>{__('Select which page you\'d like to use as your homepage. You can use the pages we just created in the last step.', 'ollie-companion')}</p>
                     </FlexItem>
                 </Flex>
                 <Flex className="ollie-setting-field">
                     <FlexItem>
-                        <label htmlFor="homepage-display">{__('Your homepage displays', 'ollie')}</label>
-                        <p>{__('Choose what kind of homepage you\'d like to start with. We\'ll help you edit it after setup.', 'ollie')}</p>
+                        <label htmlFor="homepage-display">{__('Your homepage displays', 'ollie-companion')}</label>
+                        <p>{__('Choose what kind of homepage you\'d like to start with. We\'ll help you edit it after setup.', 'ollie-companion')}</p>
                     </FlexItem>
                     <FlexItem>
                         <RadioControl

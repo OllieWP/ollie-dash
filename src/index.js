@@ -2,5 +2,5 @@
 import { createRoot } from '@wordpress/element';
 import Settings from './settings/Settings';
 
-let settings = createRoot(document.getElementById('ollie-onboarding'));
+let settings = createRoot(document.getElementById('ollie-settings'));
 settings.render(<Settings/>);

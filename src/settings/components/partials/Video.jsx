@@ -24,7 +24,7 @@ function Video(props) {
 					</div>
 				</div>
 				<div className="ollie-dash-video-play">
-					<img src={PlayIcon}/> <span>{__('Click to Play', 'ollie')}</span>
+					<img src={PlayIcon}/> <span>{__('Click to Play', 'ollie-companion')}</span>
 				</div>
 			</div>
 			<ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId={props.videoId} onClose={() => setOpen(false)} />

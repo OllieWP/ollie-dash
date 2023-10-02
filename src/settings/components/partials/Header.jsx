@@ -20,10 +20,10 @@ function Header(props) {
 			</FlexItem>
 			<FlexItem>
 				<ul className="ollie-dash-nav">
-					<li><a href="https://olliewp.com">{__('OllieWP.com', 'ollie')}</a></li>
-					<li><a href="https://twitter.com/buildwithollie">{__('Twitter', 'ollie')}</a></li>
-					<li><a href="https://www.youtube.com/@OllieWP">{__('YouTube', 'ollie')}</a></li>
-					<li><a href="https://github.com/OllieWP/ollie">{__('GitHub', 'ollie')}</a></li>
+					<li><a href="https://olliewp.com">{__('OllieWP.com', 'ollie-companion')}</a></li>
+					<li><a href="https://twitter.com/buildwithollie">{__('Twitter', 'ollie-companion')}</a></li>
+					<li><a href="https://www.youtube.com/@OllieWP">{__('YouTube', 'ollie-companion')}</a></li>
+					<li><a href="https://github.com/OllieWP/ollie">{__('GitHub', 'ollie-companion')}</a></li>
 				</ul>
 			</FlexItem>
 		</Flex>

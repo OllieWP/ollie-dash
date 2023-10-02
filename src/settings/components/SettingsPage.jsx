@@ -38,7 +38,7 @@ function SettingsPage() {
                           className={"ollie-nav-container"}>
                         <div className={"ollie-back-to-dash"}>
                             <a href={ollie_options.dashboard_link}><Dashicon
-                                icon="wordpress"/> {__('Back to Dashboard', 'ollie')}</a>
+                                icon="wordpress"/> {__('Back to Dashboard', 'ollie-companion')}</a>
                         </div>
                         <Flex align="start" gap="0" className="ollie-menu-container">
                             <FlexItem className="ollie-back-button">
@@ -48,33 +48,33 @@ function SettingsPage() {
                             <FlexItem>
                                 {activeItem === '/' &&
                                     <div className={"ollie-panel-description"}>
-                                        <h1 className={"settings-headline edit-site-sidebar-navigation-screen__title"}>{__('Ollie Dashboard', 'ollie')}</h1>
+                                        <h1 className={"settings-headline edit-site-sidebar-navigation-screen__title"}>{__('Ollie Dashboard', 'ollie-companion')}</h1>
                                         <p className="edit-site-sidebar-navigation-screen__description">
-                                            {__('Here, you\'ll find everything you need to get started building with the Ollie theme.', 'ollie')}
+                                            {__('Here, you\'ll find everything you need to get started building with the Ollie theme.', 'ollie-companion')}
                                         </p>
                                     </div>
                                 }
                                 {activeItem === '/onboarding' &&
                                     <div className={"ollie-panel-description"}>
-                                        <h1 className={"settings-headline edit-site-sidebar-navigation-screen__title"}>{__('Ollie Theme Setup', 'ollie')}</h1>
+                                        <h1 className={"settings-headline edit-site-sidebar-navigation-screen__title"}>{__('Ollie Theme Setup', 'ollie-companion')}</h1>
                                         <p className="edit-site-sidebar-navigation-screen__description">
-                                            {__('Welcome to the Ollie setup wizard! We\'ll help you get your site up and running in just a few minutes.', 'ollie')}
+                                            {__('Welcome to the Ollie setup wizard! We\'ll help you get your site up and running in just a few minutes.', 'ollie-companion')}
                                         </p>
                                     </div>
                                 }
                                 {activeItem === '/documentation' &&
                                     <div className={"ollie-panel-description"}>
-                                        <h1 className={"settings-headline edit-site-sidebar-navigation-screen__title"}>{__('Ollie Docs', 'ollie')}</h1>
+                                        <h1 className={"settings-headline edit-site-sidebar-navigation-screen__title"}>{__('Ollie Docs', 'ollie-companion')}</h1>
                                         <p className="edit-site-sidebar-navigation-screen__description">
-                                            {__('Learn how to build beautiful, blazing fast websites with Ollie and the WordPress site editor.', 'ollie')}
+                                            {__('Learn how to build beautiful, blazing fast websites with Ollie and the WordPress site editor.', 'ollie-companion')}
                                         </p>
                                     </div>
                                 }
                                 {activeItem === '/videos' &&
                                     <div className={"ollie-panel-description"}>
-                                        <h1 className={"settings-headline edit-site-sidebar-navigation-screen__title"}>{__('Ollie Videos', 'ollie')}</h1>
+                                        <h1 className={"settings-headline edit-site-sidebar-navigation-screen__title"}>{__('Ollie Videos', 'ollie-companion')}</h1>
                                         <p className="edit-site-sidebar-navigation-screen__description">
-                                            {__('Learn how to build beautiful, blazing fast websites with Ollie and the WordPress site editor.', 'ollie')}
+                                            {__('Learn how to build beautiful, blazing fast websites with Ollie and the WordPress site editor.', 'ollie-companion')}
                                         </p>
                                     </div>
                                 }
@@ -83,7 +83,7 @@ function SettingsPage() {
                                     <NavigatorButton onClick={() => setActiveItem('/')}
                                                      className={activeItem === '/' ? 'ollie-nav-is-active' : ''}
                                                      path="/">
-                                        <Icon icon={home}/> {__('Welcome', 'ollie')}
+                                        <Icon icon={home}/> {__('Welcome', 'ollie-companion')}
                                     </NavigatorButton>
 									<NavigatorButton 
 										onClick={() => setActiveItem('/onboarding')}
@@ -92,17 +92,17 @@ function SettingsPage() {
 											'ollie-onboarding-finished': ollie_options.onboarding_complete,
 										})}
 										path="/onboarding">
-										<Icon icon={formatListNumbered}/> {__('Theme Setup', 'ollie')}
+										<Icon icon={formatListNumbered}/> {__('Theme Setup', 'ollie-companion')}
 									</NavigatorButton>
                                     <NavigatorButton onClick={() => setActiveItem('/videos')}
                                                      className={activeItem === '/videos' ? 'ollie-nav-is-active' : ''}
                                                      path="/videos">
-                                        <Icon icon={video}/> {__('Video Library', 'ollie')}
+                                        <Icon icon={video}/> {__('Video Library', 'ollie-companion')}
                                     </NavigatorButton>
 									<NavigatorButton onClick={() => setActiveItem('/documentation')}
                                                      className={activeItem === '/documentation' ? 'ollie-nav-is-active' : ''}
                                                      path="/documentation">
-                                        <Icon icon={pages}/> {__('Ollie Docs', 'ollie')}
+                                        <Icon icon={pages}/> {__('Ollie Docs', 'ollie-companion')}
                                     </NavigatorButton>
                                 </Flex>
                             </FlexItem>

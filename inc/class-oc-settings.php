@@ -40,8 +40,8 @@ class Settings {
 	 */
 	public function add_menu() {
 		$settings_suffix = add_theme_page(
-			__( 'Ollie', 'ollie' ),
-			__( 'Ollie', 'ollie' ),
+			__( 'Ollie', 'ollie-companion' ),
+			__( 'Ollie', 'ollie-companion' ),
 			'manage_options',
 			'ollie',
 			array( $this, 'render_settings' )
@@ -61,7 +61,7 @@ class Settings {
 		if ( 'appearance_page_ollie' === $screen->base ) {
 			wp_enqueue_media();
 
-			wp_enqueue_script( 'ollie-onboarding-settings', OC_URL . '/build/index.js', array(
+			wp_enqueue_script( 'ollie-settings', OC_URL . '/build/index.js', array(
 				'wp-api',
 				'wp-components',
 				'wp-plugins',
@@ -99,10 +99,10 @@ class Settings {
 
 			// Make the blocks translatable.
 			if ( function_exists( 'wp_set_script_translations' ) ) {
-				wp_set_script_translations( 'ollie-onboarding-settings', 'ollie-data', OC_PATH . '/languages' );
+				wp_set_script_translations( 'ollie-settings', 'ollie-data', OC_PATH . '/languages' );
 			}
 
-			wp_enqueue_style( 'ollie-onboarding-settings-style', OC_URL . '/build/index.css', array( 'wp-components' ) );
+			wp_enqueue_style( 'ollie-settings-style', OC_URL . '/build/index.css', array( 'wp-components' ) );
 		}
 	}
 
@@ -113,7 +113,7 @@ class Settings {
 	 */
 	public function render_settings() {
 		?>
-        <div id="ollie-onboarding"></div>
+        <div id="ollie-settings"></div>
 		<?php
 	}
 
