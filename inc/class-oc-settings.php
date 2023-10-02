@@ -31,53 +31,6 @@ class Settings {
 	public function __construct() {
 		add_action( 'admin_menu', array( $this, 'add_menu' ) );
 		add_action( 'rest_api_init', array( $this, 'rest_api_init' ) );
-
-		// Admin notice.
-		add_action( 'admin_notices', array( $this, 'display_activation_notice' ) );
-		add_action( 'wp_ajax_dismiss_theme_activation_notice', array( $this, 'dismiss_notice' ) );
-		add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_notice_scripts' ) );
-	}
-
-	/**
-	 * Display an admin notice on the Themes page
-	 * @return void
-	 */
-	public function display_activation_notice() {
-		$notice_transient = 'ollie_activation_notice';
-		$current_screen   = get_current_screen();
-
-		// Only show the notice on the theme page and if not dismissed
-		if ( $current_screen && $current_screen->base === 'themes' && ! get_transient( $notice_transient ) ) {
-			$title   = __( 'Welcome to the Ollie Block Theme!', 'ollie' );
-			$message = sprintf( __( 'We\'ve put together a helpful <a href="%s"><b>Theme Dashboard</b></a> (Appearance → Ollie) to help you learn about Ollie, set up your theme, view the docs, and more.', 'ollie' ), esc_url( admin_url( 'themes.php?page=ollie' ) ) );
-
-			printf(
-				'<div id="ollie-activation-notice" class="notice notice-success is-dismissible"><h2 style="margin-bottom: .5em">%s</h2><p style="margin-bottom: 1em">%s</p></div>',
-				esc_html( $title ),
-				$message
-			);
-		}
-	}
-
-	/**
-	 * Set a transient for the theme activation notice
-	 * @return void
-	 */
-	public function dismiss_notice() {
-		set_transient( 'ollie_activation_notice', true, YEAR_IN_SECONDS );
-	}
-
-	/**
-	 * Enqueue scripts for the admin notice.
-	 * @return void
-	 */
-	public function enqueue_notice_scripts() {
-		$screen = get_current_screen();
-
-		// Only load the script on the Themes page
-		if ( $screen->base === 'themes' ) {
-			wp_enqueue_script( 'ollie-activation-notice', OC_URL . '/assets/js/notice.js', array( 'jquery' ), null, true );
-		}
 	}
 
 	/**
