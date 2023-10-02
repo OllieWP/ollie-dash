@@ -95,7 +95,7 @@ class Settings {
 				$args['blog_id']          = get_option( 'page_for_posts' );
 			}
 
-			wp_localize_script( 'ollie-onboarding-settings', 'ollie_options', $args );
+			wp_localize_script( 'ollie-settings', 'ollie_options', $args );
 
 			// Make the blocks translatable.
 			if ( function_exists( 'wp_set_script_translations' ) ) {
