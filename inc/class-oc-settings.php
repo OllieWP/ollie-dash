@@ -79,8 +79,16 @@ class Settings {
 				'dashboard_link'      => esc_url( admin_url() ),
 				'home_link'           => esc_url( home_url() ),
 				'logo'                => OC_URL . '/assets/ollie-logo.svg',
+				'permalink_structure' => true,
 				'onboarding_complete' => false,
 			);
+
+			// Check permalink structure.
+			$permalinks = get_option( 'permalink_structure' );
+
+			if ( empty( $permalinks ) ) {
+				$args['permalink_structure'] = false;
+			}
 
 			// Adjust homepage display based on WP settings.
 			$front = get_option( 'show_on_front' );
