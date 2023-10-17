@@ -155,6 +155,22 @@ class Settings {
 			},
 		) );
 
+		register_rest_route( 'ollie/v1', '/site-logo', array(
+			'methods'             => 'GET',
+			'callback'            => [ $this, 'get_logo' ],
+			'permission_callback' => function () {
+				return current_user_can( 'manage_options' );
+			},
+		) );
+
+		register_rest_route( 'ollie/v1', '/site-logo', array(
+			'methods'             => 'POST',
+			'callback'            => [ $this, 'set_logo' ],
+			'permission_callback' => function () {
+				return current_user_can( 'manage_options' );
+			},
+		) );
+
 		register_rest_route( 'ollie/v1', '/create-pages', array(
 			'methods'             => 'POST',
 			'callback'            => [ $this, 'create_pages' ],
@@ -184,6 +200,11 @@ class Settings {
 		if ( $request->get_params() ) {
 			$options = $request->get_params();
 			update_option( 'ollie', $this->sanitize_options_array( $options ) );
+
+			// Update logo.
+			if ( isset( $options['site_logo'] ) ) {
+				update_option( 'site_logo', absint( $options['site_logo'] ) );
+			}
 
 			// Set up the homepage.
 			if ( isset( $options['homepage_display'] ) ) {
@@ -270,6 +291,43 @@ class Settings {
 		}
 
 		return json_encode( [ "status" => 400, "message" => "Could not create pages." ] );
+	}
+
+
+	/**
+	 * Get site logo via Rest API.
+	 *
+	 * @return false|mixed|null
+	 */
+	public function get_logo() {
+		$options = get_option( 'ollie' );
+
+		if ( isset( $options['site_logo'] ) ) {
+			return esc_url( wp_get_attachment_url( $options['site_logo'] ) );
+		}
+
+		return json_encode( [ "status" => 400, "message" => "Could not find a site logo." ] );
+	}
+
+	/**
+	 * Update site logo via REST API.
+	 *
+	 * @param object $request given request.
+	 *
+	 * @return string
+	 */
+	public function set_logo( $request ) {
+		if ( $request->get_params() ) {
+			$data    = $request->get_params();
+			$options = get_option( 'ollie' );
+
+			$options['site_logo'] = absint( $data['logo'] );
+			update_option( 'ollie', $options );
+
+			return json_encode( [ "status" => 200, "message" => "Ok" ] );
+		}
+
+		return json_encode( [ "status" => 400, "message" => "Could not set logo" ] );
 	}
 
 	/**

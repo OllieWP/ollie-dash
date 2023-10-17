@@ -10,6 +10,7 @@ import {
 } from '@wordpress/components';
 import {SettingsContext} from "../../context/SettingsContext";
 import {CustomMediaUpload} from "../partials/CustomMediaUpload";
+import {CustomLogoUpload} from "../partials/CustomLogoUpload";
 import browserIcon from '../../assets/images/browser-icon.svg';
 
 import EmojiPicker, {
@@ -33,6 +34,7 @@ function BrandSetup() {
 	const [palettes, setPalettes] = useState({});
 	const [brandColor, setBrandColor] = useState();
 	const [style, setStyle] = useState('standard');
+	const [siteLogo, setSiteLogo] = useState(false);
 	const [siteIcon, setSiteIcon] = useState(false);
 	const [isModalOpen, setModalOpen] = useState(false);
 
@@ -128,6 +130,10 @@ function BrandSetup() {
 			setStyle(settings.style);
 		}
 
+		if (settings.site_logo) {
+			setSiteLogo(settings.site_logo);
+		}
+
 		if (settings.site_icon) {
 			setSiteIcon(settings.site_icon);
 		}
@@ -212,6 +218,24 @@ function BrandSetup() {
 								}
 							</>
 						}
+					</FlexItem>
+				</Flex>
+				<Flex className="ollie-setting-field">
+					<FlexItem>
+						<label for="site-logo">{__('Logo', 'ollie')}</label>
+						<p>{__('Choose an image to be used for your Site Logo. Your site title will be used if no logo is set.', 'ollie')}</p>
+					</FlexItem>
+					<FlexItem>
+						<div className={"site-logo-preview"}>
+							<CustomLogoUpload
+								labelId="site-logo"
+								mediaId={siteLogo}
+								onMediaSelected={(value) => {
+									updateSetting("site_logo", value);
+									setSiteLogo(value);
+								}}
+							/>
+						</div>
 					</FlexItem>
 				</Flex>
 				<Flex className="ollie-setting-field">
