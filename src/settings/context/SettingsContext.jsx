@@ -9,6 +9,7 @@ function SettingsContextProvider(props) {
         home_id: ollie_options.home_id,
         brand_color: '#4D34FA',
         style: 'blue',
+        site_icon: '',
     };
 
     const [settingsSaved, setSettingsSaved] = useState(false);
