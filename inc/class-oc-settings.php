@@ -139,6 +139,14 @@ class Settings {
 			},
 		) );
 
+		register_rest_route( 'ollie/v1', '/create-child-theme', array(
+			'methods'             => 'POST',
+			'callback'            => [ $this, 'create_child_theme' ],
+			'permission_callback' => function () {
+				return current_user_can( 'manage_options' );
+			},
+		) );
+
 		register_rest_route( 'ollie/v1', '/complete-onboarding', array(
 			'methods'             => 'POST',
 			'callback'            => [ $this, 'complete_onboarding' ],
@@ -229,6 +237,23 @@ class Settings {
 		}
 
 		return json_encode( [ "status" => 400, "message" => "Could not save settings" ] );
+	}
+
+	/**
+	 * Create child theme via helper method.
+	 *
+	 * @param object $request given request.
+	 *
+	 * @return string
+	 */
+	public function create_child_theme( $request ) {
+		if ( $request->get_params() ) {
+			Helper::create_child_theme();
+
+			return json_encode( [ "status" => 200, "message" => "Ok" ] );
+		}
+
+		return json_encode( [ "status" => 400, "message" => "Could not create child theme." ] );
 	}
 
 	/**

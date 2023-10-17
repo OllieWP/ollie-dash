@@ -43,12 +43,45 @@ class Helper {
 		?>
 
 		<?php if ( isset( $options['site_icon'] ) && $options['site_icon'] != '' ): ?>
-			<link rel="shortcut icon" href="<?php echo esc_url( $options['site_icon'] ); ?>">
+            <link rel="shortcut icon" href="<?php echo esc_url( $options['site_icon'] ); ?>">
 		<?php endif; ?>
 		<?php
 	}
 
+	/**
+	 * Create child theme for Ollie.
+	 *
+	 * @return void
+	 */
+	public static function create_child_theme() {
+		// Prepare directories.
+		$child_theme_file_dir = OC_PATH . '/inc/child-theme';
+		$ollie_dir            = get_template_directory();
+		$ollie_child_dir      = str_replace( '/themes/ollie', '/themes/ollie-child', $ollie_dir );
 
+		// Create directory.
+		if ( ! file_exists( $ollie_child_dir ) ) {
+			wp_mkdir_p( $ollie_child_dir );
+		}
+
+		// Copy CSS file.
+		if ( ! copy( $child_theme_file_dir . '/style.css', $ollie_child_dir . '/style.css' ) ) {
+			error_log( 'Failed to copy style.css.' );
+		}
+
+		// Copy screenshot.
+		if ( ! copy( $child_theme_file_dir . '/screenshot.png', $ollie_child_dir . '/screenshot.png' ) ) {
+			error_log( 'Failed to copy screenshot.png.' );
+		}
+
+		// Copy functions.php file.
+		if ( ! copy( $child_theme_file_dir . '/functions.php', $ollie_child_dir . '/functions.php' ) ) {
+			error_log( 'Failed to copy functions.php.' );
+		}
+
+		// Activate child theme.
+		switch_theme( 'ollie-child' );
+	}
 
 	/**
 	 * Create pages in WordPress.
@@ -98,7 +131,7 @@ class Helper {
 		$ollie_style = json_decode( file_get_contents( get_template_directory() . '/theme.json' ) );
 
 		if ( isset( $settings['style'] ) ) {
-			
+
 			if ( 'purple' === $settings['style'] ) {
 				$ollie_style = json_decode( file_get_contents( get_template_directory() . '/theme.json' ) );
 			} else {
