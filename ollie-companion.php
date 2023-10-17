@@ -17,6 +17,16 @@ define( 'OC_PATH', untrailingslashit( plugin_dir_path( __FILE__ ) ) );
 define( 'OC_URL', untrailingslashit( plugin_dir_url( __FILE__ ) ) );
 define( 'OC_VERSION', '0.5' );
 
+// GitHub Updater.
+require OC_PATH . '/inc/plugin-update-checker/plugin-update-checker.php';
+
+use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
+
+$update_checker = PucFactory::buildUpdateChecker(
+	'https://github.com/OllieWP/ollie-companion/',
+	__FILE__,
+	'ollie-companion'
+);
 
 // run plugin.
 if ( ! function_exists( 'oc_run_plugin' ) ) {
