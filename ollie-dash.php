@@ -17,17 +17,6 @@ define( 'OD_PATH', untrailingslashit( plugin_dir_path( __FILE__ ) ) );
 define( 'OD_URL', untrailingslashit( plugin_dir_url( __FILE__ ) ) );
 define( 'OD_VERSION', '1.0' );
 
-// GitHub Updater.
-require OD_PATH . '/inc/plugin-update-checker/plugin-update-checker.php';
-
-use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
-
-$update_checker = PucFactory::buildUpdateChecker(
-	'https://github.com/OllieWP/ollie-dash/',
-	__FILE__,
-	'ollie-dash'
-);
-
 // run plugin.
 if ( ! function_exists( 'od_run_plugin' ) ) {
 	add_action( 'plugins_loaded', 'od_run_plugin' );
