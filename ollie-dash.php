@@ -3,7 +3,7 @@
  * Plugin Name:       Ollie Dash
  * Plugin URI:        https://olliewp-com/ollie-dash
  * Description:       A companion plugin for the Ollie theme.
- * Version:           0.5
+ * Version:           1.0
  * Author:            OllieWP Team
  * Author URI:        https://olliewp.com
  * License:           GPL-2.0+
@@ -15,7 +15,7 @@
 
 define( 'OD_PATH', untrailingslashit( plugin_dir_path( __FILE__ ) ) );
 define( 'OD_URL', untrailingslashit( plugin_dir_url( __FILE__ ) ) );
-define( 'OD_VERSION', '0.5' );
+define( 'OD_VERSION', '1.0' );
 
 // GitHub Updater.
 require OD_PATH . '/inc/plugin-update-checker/plugin-update-checker.php';

@@ -3,7 +3,7 @@ Contributors:      patrickposner, mikemcalister
 Tags:              ollie, onboarding
 Requires at least: 6.3
 Tested up to:      6.3
-Stable tag:        0.5
+Stable tag:        1.0
 Requires PHP:      7.4
 License:           GPLv2 or later
 License URI:       http://www.gnu.org/licenses/gpl-2.0.html
@@ -12,7 +12,7 @@ A companion plugin for the Ollie FSE theme.
 
 == Description ==
 
-This plugin is a companion plugin for the Ollie FSE theme. It allows you to setup the theme quickly.
+This plugin is a companion plugin for the Ollie FSE theme. It allows you to set up the Ollie theme quickly.
 
 == Installation ==
 
@@ -26,6 +26,6 @@ Install it and go to Appearance -> Ollie to get started.
 
 == Changelog ==
 
-= 0.5 =
+= 1.0 =
 
 * initial release
