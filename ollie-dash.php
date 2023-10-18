@@ -1,14 +1,14 @@
 <?php
 /**
- * Plugin Name:       Ollie Companion
- * Plugin URI:        https://olliewp-com/ollie-companion
+ * Plugin Name:       Ollie Dash
+ * Plugin URI:        https://olliewp-com/ollie-dash
  * Description:       A companion plugin for the Ollie theme.
  * Version:           0.5
  * Author:            OllieWP Team
  * Author URI:        https://olliewp.com
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
- * Text Domain:       ollie-companion
+ * Text Domain:       ollie-dash
  * Domain Path:       /languages
  *
  */
@@ -23,9 +23,9 @@ require OC_PATH . '/inc/plugin-update-checker/plugin-update-checker.php';
 use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
 
 $update_checker = PucFactory::buildUpdateChecker(
-	'https://github.com/OllieWP/ollie-companion/',
+	'https://github.com/OllieWP/ollie-dash/',
 	__FILE__,
-	'ollie-companion'
+	'ollie-dash'
 );
 
 // run plugin.
@@ -40,7 +40,7 @@ if ( ! function_exists( 'oc_run_plugin' ) ) {
 	function oc_run_plugin() {
 		// Localize the plugin.
 		$textdomain_dir = plugin_basename( dirname( __FILE__ ) ) . '/languages';
-		load_plugin_textdomain( 'ollie-companion', false, $textdomain_dir );
+		load_plugin_textdomain( 'ollie-dash', false, $textdomain_dir );
 
 		require_once( OC_PATH . '/inc/class-oc-settings.php' );
 		require_once( OC_PATH . '/inc/class-oc-helper.php' );

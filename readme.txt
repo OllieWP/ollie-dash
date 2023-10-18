@@ -1,4 +1,4 @@
-=== Ollie Companion ===
+=== Ollie Dash ===
 Contributors:      patrickposner, mikemcalister
 Tags:              ollie, onboarding
 Requires at least: 6.3
