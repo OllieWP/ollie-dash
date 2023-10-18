@@ -47,14 +47,14 @@ function CreatePages() {
 			<div className="ollie-setting-fields">
 				<Flex className="ollie-setting-intro">
 					<FlexItem>
-						<h2 ref={pageStart}>{__('Create Pages', 'ollie-companion')}</h2>
-						<p>{__('Ollie comes with several full-page designs. Select the pages you\'d like us to create for you.', 'ollie-companion')}</p>
+						<h2 ref={pageStart}>{__('Create Pages', 'ollie-dash')}</h2>
+						<p>{__('Ollie comes with several full-page designs. Select the pages you\'d like us to create for you.', 'ollie-dash')}</p>
 					</FlexItem>
 				</Flex>
 				<Flex className={"ollie-page-list"}>
 					<FlexItem className="ollie-page-item">
 						<CheckboxControl
-							label={__('Ollie Homepage', 'ollie-companion')}
+							label={__('Ollie Homepage', 'ollie-dash')}
 							checked={checkSelectedPages('home')}
 							onChange={() => {
 
@@ -69,7 +69,7 @@ function CreatePages() {
 					</FlexItem>
 					<FlexItem className="ollie-page-item">
 						<CheckboxControl
-							label={__('Ollie Blog', 'ollie-companion')}
+							label={__('Ollie Blog', 'ollie-dash')}
 							checked={checkSelectedPages('blog')}
 							onChange={() => {
 
@@ -84,7 +84,7 @@ function CreatePages() {
 					</FlexItem>
 					<FlexItem className="ollie-page-item">
 						<CheckboxControl
-							label={__('Ollie About', 'ollie-companion')}
+							label={__('Ollie About', 'ollie-dash')}
 							checked={checkSelectedPages('about')}
 							onChange={() => {
 
@@ -100,7 +100,7 @@ function CreatePages() {
 
 					<FlexItem className="ollie-page-item">
 						<CheckboxControl
-							label={__('Ollie Features', 'ollie-companion')}
+							label={__('Ollie Features', 'ollie-dash')}
 							checked={checkSelectedPages('features')}
 							onChange={() => {
 
@@ -116,7 +116,7 @@ function CreatePages() {
 
 					<FlexItem className="ollie-page-item">
 						<CheckboxControl
-							label={__('Ollie Pricing', 'ollie-companion')}
+							label={__('Ollie Pricing', 'ollie-dash')}
 							checked={checkSelectedPages('pricing')}
 							onChange={() => {
 
@@ -132,7 +132,7 @@ function CreatePages() {
 
 					<FlexItem className="ollie-page-item">
 						<CheckboxControl
-							label={__('Ollie Download', 'ollie-companion')}
+							label={__('Ollie Download', 'ollie-dash')}
 							checked={checkSelectedPages('download')}
 							onChange={() => {
 
@@ -148,7 +148,7 @@ function CreatePages() {
 
 					<FlexItem className="ollie-page-item">
 						<CheckboxControl
-							label={__('Ollie Profile', 'ollie-companion')}
+							label={__('Ollie Profile', 'ollie-dash')}
 							checked={checkSelectedPages('profile')}
 							onChange={() => {
 

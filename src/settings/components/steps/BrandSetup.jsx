@@ -145,14 +145,14 @@ function BrandSetup() {
 			<div className="ollie-setting-fields">
 				<Flex className="ollie-setting-intro">
 					<FlexItem>
-						<h2 ref={pageStart}>{__('Your Brand', 'ollie-companion')}</h2>
-						<p>{__('First, let\'s choose a color palette for your site and then add some branding. All settings are optional!', 'ollie-companion')}</p>
+						<h2 ref={pageStart}>{__('Your Brand', 'ollie-dash')}</h2>
+						<p>{__('First, let\'s choose a color palette for your site and then add some branding. All settings are optional!', 'ollie-dash')}</p>
 					</FlexItem>
 				</Flex>
 				<Flex className="ollie-setting-field">
 					<FlexItem>
-						<label htmlFor="ollie-color-palette">{__('Color Palette', 'ollie-companion')}</label>
-						<p>{__('Choose a color palette that closely matches your brand. You can customize this later in Global Styles.', 'ollie-companion')}</p>
+						<label htmlFor="ollie-color-palette">{__('Color Palette', 'ollie-dash')}</label>
+						<p>{__('Choose a color palette that closely matches your brand. You can customize this later in Global Styles.', 'ollie-dash')}</p>
 					</FlexItem>
 					<FlexItem>
 						<SelectControl
@@ -191,8 +191,8 @@ function BrandSetup() {
 				</Flex>
 				<Flex className="ollie-setting-field">
 					<FlexItem>
-						<label htmlFor="brand-color">{__('Brand Color', 'ollie-companion')}</label>
-						<p>{__('Use the accent color above, or add your brand color to be used as the main accent color on your site.', 'ollie-companion')}</p>
+						<label htmlFor="brand-color">{__('Brand Color', 'ollie-dash')}</label>
+						<p>{__('Use the accent color above, or add your brand color to be used as the main accent color on your site.', 'ollie-dash')}</p>
 					</FlexItem>
 					<FlexItem>
 						{palettes[style] ?

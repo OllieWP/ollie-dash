@@ -13,12 +13,12 @@
  *
  */
 
-define( 'OC_PATH', untrailingslashit( plugin_dir_path( __FILE__ ) ) );
-define( 'OC_URL', untrailingslashit( plugin_dir_url( __FILE__ ) ) );
-define( 'OC_VERSION', '0.5' );
+define( 'OD_PATH', untrailingslashit( plugin_dir_path( __FILE__ ) ) );
+define( 'OD_URL', untrailingslashit( plugin_dir_url( __FILE__ ) ) );
+define( 'OD_VERSION', '0.5' );
 
 // GitHub Updater.
-require OC_PATH . '/inc/plugin-update-checker/plugin-update-checker.php';
+require OD_PATH . '/inc/plugin-update-checker/plugin-update-checker.php';
 
 use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
 
@@ -29,24 +29,24 @@ $update_checker = PucFactory::buildUpdateChecker(
 );
 
 // run plugin.
-if ( ! function_exists( 'oc_run_plugin' ) ) {
-	add_action( 'plugins_loaded', 'oc_run_plugin' );
+if ( ! function_exists( 'od_run_plugin' ) ) {
+	add_action( 'plugins_loaded', 'od_run_plugin' );
 
 	/**
 	 * Run plugin
 	 *
 	 * @return void
 	 */
-	function oc_run_plugin() {
+	function od_run_plugin() {
 		// Localize the plugin.
 		$textdomain_dir = plugin_basename( dirname( __FILE__ ) ) . '/languages';
 		load_plugin_textdomain( 'ollie-dash', false, $textdomain_dir );
 
-		require_once( OC_PATH . '/inc/class-oc-settings.php' );
-		require_once( OC_PATH . '/inc/class-oc-helper.php' );
+		require_once( OD_PATH . '/inc/class-od-settings.php' );
+		require_once( OD_PATH . '/inc/class-od-helper.php' );
 
-		oc\Settings::get_instance();
-		oc\Helper::get_instance();
+		od\Settings::get_instance();
+		od\Helper::get_instance();
 	}
 }
 

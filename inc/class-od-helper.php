@@ -1,6 +1,6 @@
 <?php
 
-namespace oc;
+namespace od;
 
 class Helper {
 	/**
@@ -55,7 +55,7 @@ class Helper {
 	 */
 	public static function create_child_theme() {
 		// Prepare directories.
-		$child_theme_file_dir = OC_PATH . '/inc/child-theme';
+		$child_theme_file_dir = OD_PATH . '/inc/child-theme';
 		$ollie_dir            = get_template_directory();
 		$ollie_child_dir      = str_replace( '/themes/ollie', '/themes/ollie-child', $ollie_dir );
 

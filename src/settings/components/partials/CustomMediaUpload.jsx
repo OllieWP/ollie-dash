@@ -19,7 +19,7 @@ function CustomMediaUpload(props) {
                             <FlexItem>
                                 <Button isSecondary onClick={() => {
                                     props.onMediaSelected(null)
-                                }}>{__('Remove Image', 'ollie-companion')}</Button>
+                                }}>{__('Remove Image', 'ollie-dash')}</Button>
                             </FlexItem>
 							<FlexItem className="ollie-upload-preview">
                                 <img src={props.mediaUrl}/>
@@ -27,7 +27,7 @@ function CustomMediaUpload(props) {
                         </Flex>
                     </>;
                 }
-                return <Button id={props.labelId} isSecondary onClick={open}>{__('Select Image', 'ollie-companion')}</Button>;
+                return <Button id={props.labelId} isSecondary onClick={open}>{__('Select Image', 'ollie-dash')}</Button>;
             }
         }/>;
 }

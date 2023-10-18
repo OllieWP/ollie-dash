@@ -21,11 +21,11 @@ function Welcome() {
                 <Flex justify="center" direction="column" align="center">
                     <img className="ollie-welcome-image" src={builderImage}/>
                     <div className="ollie-welcome-text">
-                        <h2 ref={pageStart}>{__('Ollie Setup Wizard', 'ollie-companion')}</h2>
-                        <p>{__('The Ollie setup wizard will help you get your site set up quickly and ready to go live. You\'re just a few screens away from a beautiful website! Ready to go?', 'ollie-companion')}</p>
+                        <h2 ref={pageStart}>{__('Ollie Setup Wizard', 'ollie-dash')}</h2>
+                        <p>{__('The Ollie setup wizard will help you get your site set up quickly and ready to go live. You\'re just a few screens away from a beautiful website! Ready to go?', 'ollie-dash')}</p>
                         <Button variant="primary" onClick={() => setCurrentStep(1)}>
                             <HStack spacing="3">
-                                <span>{__('Let\'s get started', 'ollie-companion')}</span> <Icon icon={arrowRight}/>
+                                <span>{__('Let\'s get started', 'ollie-dash')}</span> <Icon icon={arrowRight}/>
                             </HStack>
                         </Button>
                     </div>

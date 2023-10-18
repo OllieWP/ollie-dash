@@ -20,78 +20,78 @@ function Documentation() {
             <FlexItem className={"ollie-setup-sidebar"}>
                 <div className="ollie-docs-nav-sticky">
                     <div className="ollie-docs-nav-overflow">
-                        <h2>{__('Documentation', 'ollie-companion')}</h2>
-                        <p>{__('Learn about the Ollie theme and how to build beautiful websites.', 'ollie-companion')}</p>
+                        <h2>{__('Documentation', 'ollie-dash')}</h2>
+                        <p>{__('Learn about the Ollie theme and how to build beautiful websites.', 'ollie-dash')}</p>
                         <Spacer margin={10}/>
                         <ul className={"ollie-docs-steps"}>
                             <li>
-                                <p className="ollie-doc-step-title">{__('Getting Started', 'ollie-companion')}</p>
+                                <p className="ollie-doc-step-title">{__('Getting Started', 'ollie-dash')}</p>
                                 <ul>
                                     <li onClick={() => setActiveItem('getting-started')}
                                         className={activeItem === 'getting-started' ? 'ollie-active-doc' : ''}>
-                                        <a href="#getting-started">{__('Getting Started with Ollie', 'ollie-companion')}</a>
+                                        <a href="#getting-started">{__('Getting Started with Ollie', 'ollie-dash')}</a>
                                     </li>
 									<li onClick={() => setActiveItem('ollie-dashboard')}
                                         className={activeItem === 'ollie-dashboard' ? 'ollie-active-doc' : ''}>
-                                        <a href="#ollie-dashboard">{__('Ollie Theme Dashboard', 'ollie-companion')}</a>
+                                        <a href="#ollie-dashboard">{__('Ollie Theme Dashboard', 'ollie-dash')}</a>
                                     </li>
                                 </ul>
                             </li>
                             <li>
-                                <p>{__('Block Themes', 'ollie-companion')}</p>
+                                <p>{__('Block Themes', 'ollie-dash')}</p>
                                 <ul>
                                     <li onClick={() => setActiveItem('block-theme-intro')}
                                         className={activeItem === 'block-theme-intro' ? 'ollie-active-doc' : ''}>
-                                        <a href="#block-theme-intro">{__('Block Theme Intro', 'ollie-companion')}</a>
+                                        <a href="#block-theme-intro">{__('Block Theme Intro', 'ollie-dash')}</a>
                                     </li>
                                     <li onClick={() => setActiveItem('site-editor')}
                                         className={activeItem === 'site-editor' ? 'ollie-active-doc' : ''}>
-                                        <a href="#site-editor">{__('Site Editor', 'ollie-companion')}</a>
+                                        <a href="#site-editor">{__('Site Editor', 'ollie-dash')}</a>
                                     </li>
                                     <li onClick={() => setActiveItem('patterns')}
                                         className={activeItem === 'patterns' ? 'ollie-active-doc' : ''}>
-                                        <a href="#patterns">{__('Patterns', 'ollie-companion')}</a>
+                                        <a href="#patterns">{__('Patterns', 'ollie-dash')}</a>
                                     </li>
                                     <li onClick={() => setActiveItem('global-styles')}
                                         className={activeItem === 'global-styles' ? 'ollie-active-doc' : ''}>
-                                        <a href="#global-styles">{__('Global Styles', 'ollie-companion')}</a>
+                                        <a href="#global-styles">{__('Global Styles', 'ollie-dash')}</a>
                                     </li>
                                     <li onClick={() => setActiveItem('template-parts')}
                                         className={activeItem === 'template-parts' ? 'ollie-active-doc' : ''}>
-                                        <a href="#template-parts">{__('Template Parts', 'ollie-companion')}</a>
+                                        <a href="#template-parts">{__('Template Parts', 'ollie-dash')}</a>
                                     </li>
                                     <li onClick={() => setActiveItem('site-export')}
                                         className={activeItem === 'site-export' ? 'ollie-active-doc' : ''}>
-                                        <a href="#site-export">{__('Export Your Site', 'ollie-companion')}</a>
+                                        <a href="#site-export">{__('Export Your Site', 'ollie-dash')}</a>
                                     </li>
                                 </ul>
                             </li>
                             <li>
-                                <p>{__('Resources', 'ollie-companion')}</p>
+                                <p>{__('Resources', 'ollie-dash')}</p>
                                 <ul>
 									<li onClick={() => setActiveItem('ollie-youtube')}
                                         className={activeItem === 'ollie-youtube' ? 'ollie-active-doc' : ''}>
-                                        <a href="#ollie-youtube">{__('Ollie YouTube Channel', 'ollie-companion')}</a>
+                                        <a href="#ollie-youtube">{__('Ollie YouTube Channel', 'ollie-dash')}</a>
                                     </li>
 									<li onClick={() => setActiveItem('developer-notes')}
                                         className={activeItem === 'developer-notes' ? 'ollie-active-doc' : ''}>
-                                        <a href="#developer-notes">{__('Developer Notes', 'ollie-companion')}</a>
+                                        <a href="#developer-notes">{__('Developer Notes', 'ollie-dash')}</a>
                                     </li>
                                     <li onClick={() => setActiveItem('license')}
                                         className={activeItem === 'license' ? 'ollie-active-doc' : ''}>
-                                        <a href="#license">{__('License', 'ollie-companion')}</a>
+                                        <a href="#license">{__('License', 'ollie-dash')}</a>
                                     </li>
                                     <li onClick={() => setActiveItem('feedback')}
                                         className={activeItem === 'feedback' ? 'ollie-active-doc' : ''}>
-                                        <a href="#feedback">{__('Feedback', 'ollie-companion')}</a>
+                                        <a href="#feedback">{__('Feedback', 'ollie-dash')}</a>
                                     </li>
                                     <li onClick={() => setActiveItem('about-creator')}
                                         className={activeItem === 'about-creator' ? 'ollie-active-doc' : ''}>
-                                        <a href="#about-creator">{__('About the Creators', 'ollie-companion')}</a>
+                                        <a href="#about-creator">{__('About the Creators', 'ollie-dash')}</a>
                                     </li>
                                     <li onClick={() => setActiveItem('support')}
                                         className={activeItem === 'support' ? 'ollie-active-doc' : ''}>
-                                        <a href="#support">{__('Support', 'ollie-companion')}</a>
+                                        <a href="#support">{__('Support', 'ollie-dash')}</a>
                                     </li>
                                 </ul>
                             </li>
