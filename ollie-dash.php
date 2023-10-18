@@ -42,11 +42,22 @@ if ( ! function_exists( 'od_run_plugin' ) ) {
 		$textdomain_dir = plugin_basename( dirname( __FILE__ ) ) . '/languages';
 		load_plugin_textdomain( 'ollie-dash', false, $textdomain_dir );
 
-		require_once( OD_PATH . '/inc/class-od-settings.php' );
-		require_once( OD_PATH . '/inc/class-od-helper.php' );
+		// Get the current theme.
+		$theme = wp_get_theme();
 
-		od\Settings::get_instance();
-		od\Helper::get_instance();
+		if( 'ollie' === $theme->template ) {
+			require_once( OD_PATH . '/inc/class-od-settings.php' );
+			require_once( OD_PATH . '/inc/class-od-helper.php' );
+
+			od\Settings::get_instance();
+			od\Helper::get_instance();
+		} else {
+			// Add admin notice.
+			add_action( 'admin_notices', function () {
+				$message = sprintf( __( 'The Ollie Dash plugin needs the free Ollie theme to work. You can get it %s.', 'ollie-dash' ), '<a target="_blank" href="https://wordpress.org/themes/ollie/">here</a>' );
+				echo wp_kses_post( '<div class="notice notice-error"><p>' . $message . '</p></div>' );
+			} );
+		}
 	}
 }
 
