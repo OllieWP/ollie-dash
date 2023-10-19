@@ -43,7 +43,7 @@ if ( ! function_exists( 'od_run_plugin' ) ) {
 		} else {
 			// Add admin notice.
 			add_action( 'admin_notices', function () {
-				$message = sprintf( __( 'The Ollie Dash plugin needs the free Ollie theme to work. You can get it %s.', 'ollie-dash' ), '<a target="_blank" href="https://wordpress.org/themes/ollie/">here</a>' );
+				$message = sprintf( __( 'The Ollie Dash plugin needs the free Ollie theme to work. View the theme and install it %s.', 'ollie-dash' ), '<a href=' . esc_url( admin_url( 'theme-install.php?search=ollie' ) ) . '>by clicking here</a>' );
 				echo wp_kses_post( '<div class="notice notice-error"><p>' . $message . '</p></div>' );
 			} );
 		}
