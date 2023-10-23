@@ -1,8 +1,8 @@
 <?php
 /**
  * Plugin Name:       Ollie Dash
- * Plugin URI:        https://olliewp-com/ollie-dash
- * Description:       A companion plugin for the Ollie theme.
+ * Plugin URI:        https://github.com/OllieWP/ollie-dash
+ * Description:       The dashboard for the Ollie theme.
  * Version:           1.0
  * Author:            OllieWP Team
  * Author URI:        https://olliewp.com
