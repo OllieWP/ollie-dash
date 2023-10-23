@@ -56,10 +56,6 @@ function Documentation() {
                                         className={activeItem === 'global-styles' ? 'ollie-active-doc' : ''}>
                                         <a href="#global-styles">{__('Global Styles', 'ollie-dash')}</a>
                                     </li>
-                                    <li onClick={() => setActiveItem('template-parts')}
-                                        className={activeItem === 'template-parts' ? 'ollie-active-doc' : ''}>
-                                        <a href="#template-parts">{__('Template Parts', 'ollie-dash')}</a>
-                                    </li>
                                     <li onClick={() => setActiveItem('site-export')}
                                         className={activeItem === 'site-export' ? 'ollie-active-doc' : ''}>
                                         <a href="#site-export">{__('Export Your Site', 'ollie-dash')}</a>
